@@ -15,6 +15,8 @@ export default function App(){
       { id: crypto.randomUUID(), title: newItem, completed: false },
     ]
       })
+
+      setNewItem("")
   }
 
   return (
@@ -33,9 +35,9 @@ export default function App(){
 
   <ul className = "list">
   {todos.map(todo => {
-    return <li>
+    return <li key = {todo.id}>
     <label>
-      <input type = "checkbox"/>{todo}
+      <input type = "checkbox" checked = {todo.completed}/>{todo.title}
     </label>
     <button className = "btn btn-danger">Delete</button>
   </li>
