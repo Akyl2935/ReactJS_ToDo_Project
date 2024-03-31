@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import "./styles.css"
 import { NewTodoForm } from "./NewToDoForm"
+import { ToDoList } from "./ToDoList"
 
 export default function App(){
   const [todos, setTodos] = useState([])
@@ -39,7 +40,7 @@ export default function App(){
  <NewTodoForm onSubmit = {addTodo} />
   <h1 className = "header" >To-Do list</h1>
 
-    <ToDoList/>
+    <ToDoList todos= {todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
   </>
   )
   }
