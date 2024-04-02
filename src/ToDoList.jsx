@@ -8,7 +8,7 @@ export function ToDoList({ todos, toggleTodo, deleteTodo }){
       return (
         <ToDoItem
         {...todo}
-        key = {todo.id} toggleTodo={todo.toggleTodo} deleteTodo={todo.deleteTodo}/>
+        key = {todo.id} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
  
       )
     })}
